@@ -3,10 +3,10 @@ import './styles.css';
 export const Settings = () => {
   return (
   <div className= "dashboard" >
-    <h1>CV</h1>
+    <h1>Ustawienia</h1>
     <p>
-      Tutaj znajduja sie ustawienia
+      Tutaj znajdują się ustawienia.
     </p>
   </div>
-  );  
+  );
 };

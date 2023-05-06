@@ -7,7 +7,6 @@ export function AppHeader() {
     <header>
       <div>
         <Logo></Logo>
-        <div className="header-title">Tytuł nagłówka</div>
       </div>
     </header>
   );

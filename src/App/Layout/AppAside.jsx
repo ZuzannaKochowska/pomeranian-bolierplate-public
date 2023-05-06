@@ -11,7 +11,7 @@ export function AppAside() {
             <NavLink to="dashboard">Dashboard</NavLink>
           </li>
           <li>
-            <NavLink to="blocks">CV</NavLink>
+            <NavLink to="cv">CV</NavLink>
           </li>
           <li>
             <NavLink to="blocks">Bloki</NavLink>
@@ -20,10 +20,10 @@ export function AppAside() {
             <NavLink to="exercises">Ćwiczenia</NavLink>
           </li>
           <li>
-            <NavLink to="calendar">Calendar</NavLink>
+            <NavLink to="calendar">Kalendarz</NavLink>
           </li>
           <li>
-            <NavLink to="settings">settings</NavLink>
+            <NavLink to="settings">Ustawienia</NavLink>
           </li>
         </ul>
       </nav>
