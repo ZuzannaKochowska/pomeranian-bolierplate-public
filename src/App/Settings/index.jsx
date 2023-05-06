@@ -1,6 +1,6 @@
 import './styles.css';
 
-export const settings = () => {
+export const Settings = () => {
   return (
   <div className= "dashboard" >
     <h1>CV</h1>

@@ -21,8 +21,8 @@ export function App() {
 
           <Route path="cv/*" element={<CV />} />
           <Route path="exercises/*" element={<Exercises />} />
-          <Route path="calendar/*" element={<calendar />} />
-          <Route path="settings/*" element={<settings />} />
+          <Route path="Calendar/*" element={<Calendar />} />
+          <Route path="Settings/*" element={<Settings />} />
           <Route path="blocks/*" element={<Blocks />} />
           <Route path="*" element={<NotFound />} />
         </Route>
