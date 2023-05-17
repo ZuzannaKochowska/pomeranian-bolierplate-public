@@ -1,0 +1,10 @@
+p {
+  font-size: x-large;
+}
+.tekstVelvet {
+
+}
+div p:last-child {
+  font-size: 25;
+  color: grey;
+}
