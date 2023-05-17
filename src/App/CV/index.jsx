@@ -5,7 +5,7 @@ export const CV = () => {
   <div className= "dashboard" >
     <h1>CV</h1>
     <p>
-      Tutaj znajduje się moje CV
+      Tutaj znajduje się moje CV!
     </p>
   </div>
   );  
