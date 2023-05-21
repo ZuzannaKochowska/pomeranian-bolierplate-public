@@ -1,5 +1,5 @@
 import './styles.css';
-import { CalendarIcon } from '../Icons/CalendarIcon';
+import { CalgitendarIcon } from '../Icons/CalendarIcon';
 
 const cookiesInLocalStarage = () => {
   console.log(!!localStorage, '!!localStorage');
