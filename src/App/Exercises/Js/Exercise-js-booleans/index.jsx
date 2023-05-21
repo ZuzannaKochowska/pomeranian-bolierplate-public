@@ -7,7 +7,7 @@ export function Exercise() {
   const checkStatement_1 = false && isValid; // false
   const checkStatement_2 = false && true && false; // false
   const checkStatement_3 = false && true && false; // false
-  const checkStatement_4 = false || (true && false);
+  const checkStatement_4 = false || (true && false); //false
 
   let x = 10;
   let y = 10;
