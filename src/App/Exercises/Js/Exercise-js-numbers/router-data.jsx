@@ -1,10 +1,10 @@
 import { Exercise } from './index';
 
 export const blockRouterMetaData = {
-  path: 'js-functions-numbers',
+  path: 'JsNumbersTraining',
   date: null,
-  linkLabel: 'Numbers w JS',
-  blockNo: 18,
+  linkLabel: 'Liczby i boolean',
+  blockNo: 19,
   element: <Exercise />,
-  tags: ['numbers', 'js', 'let', 'const'],
+  tags: ['numbers', 'training', 'boolean'],
 };
