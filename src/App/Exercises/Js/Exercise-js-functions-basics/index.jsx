@@ -1,38 +1,48 @@
 import './styles.css';
 
 export function Exercise() {
-  function multiply(num1, num2) {
-    return num1 * num2;
+  const a = 2;
+  const b = 3;
+  //declaration types - 1
+  function multiplyTypeFunction() {
+    return a*b
+  }}
+
+  const multiplyTypeArrowFunction = () => {
+    return a * b
+  };
+ // lambda
+ const_ multiplyTypeArrowFunction_lambda = () => a * b;
+
+  const filterHelper = (num) => {
+    return num => 3
   }
 
-  function getWelcomeMessage(name, amount) {
-    return `Witaj ${name}! Jesteś ${amount} uzytkownikiem odwiedzającym tę stronę!`;
+  const array_anonymous_function_with_declaration = [1,2,3].filter((num) => num >= 3)
+  const array_function_with_declaration = [1,2,3].filter((num) => filterHelper(num))
+
+  function outsideFunction() {
+    function insideFunction() {
+      console.log('test');
+
+      return insideFunction
+    }
   }
+
+  outsideFunction();
 
   return (
-    <div>
-      <p>Definiowanie funkcji</p>
-      <pre>
-        <code>
-          {`
-            function multiply(num1, num2) {
-                return num1 * num2;
-            }
-            
-            const result = multiply(9, 9)  // wynik 81
-            `}
-        </code>
-      </pre>
-
-      <section>
-        <h2>Wykorzystywanie funkcji - przykłady</h2>
-        <pre>
-          <code>9 * 9 = {multiply(9, 9)}</code>
-        </pre>
-        <pre>
-          <code>{getWelcomeMessage('Jon', 129384)}</code>
-        </pre>
-      </section>
+    <div> 
+      {/* {Deklaracje funkcji} */}
+      <div>{multiplyTypeFunction(a,b)}</div>
+      <div> {multiplyTypeArrowFunction(a,b)}</div>
+      {/* {Wywołanie funkcji anonimowej - nie deklarujemy} */}
+      <div> 
+        {() => {
+        return a*b;
+        }
+      </div>
     </div>
-  );
-}
+  )
+      
+  
