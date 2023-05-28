@@ -27,7 +27,6 @@ export function ExerciseJsArraysMethods() {
   return (
     <div>
       <p> Metody na tablicach: </p>
-
       <code>{objectOfMultipleTypes.zuza.daneOsobowe}</code>
       <br />
       <code>{objectOfMultipleTypes.kursFe}</code>
@@ -43,6 +42,9 @@ export function ExerciseJsArraysMethods() {
       <code>{objectOfMultipleTypes['zuza']['daneOsobowe']}</code>
       <br />
       <code>{mergeObjects()}</code>
+      <br />
+      [kursFe] <br />
+      {/* Destrukturyzacja tablicy: {String(kursFe2)} */}
     </div>
   );
   function mergeObjects() {
