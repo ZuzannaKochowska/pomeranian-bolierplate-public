@@ -5,6 +5,16 @@ const arrayOfNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // const arrayOfNumbersOne = [1, 2, 3, 4, 5];
 // const arrayOfNumbersTwo = [6, 7, 8, 9, 10];
 
+//obiekty - tablica obiektów
+const objectOfMultipleTypes = {
+  zuza: { daneOsobowe: 'Jestem z Gdańska' },
+  kursFe: 'react',
+  kursFe1: 1,
+  kursFe2: true,
+  kursFe3: [],
+  kursFe4: () => 'Lubię Vanilla JS', //funkcja bez wąsów
+};
+
 export function ExerciseJsArraysMethods() {
   function filterMethod(arrayOfNumbers) {
     const greaterThan5 = arrayOfNumbers.filter(function (kot) {
@@ -17,11 +27,33 @@ export function ExerciseJsArraysMethods() {
   return (
     <div>
       <p> Metody na tablicach: </p>
-      <pre>
-        <code>{''}</code>
-      </pre>
+
+      <code>{objectOfMultipleTypes.zuza.daneOsobowe}</code>
+      <br />
+      <code>{objectOfMultipleTypes.kursFe}</code>
+      <br />
+      <code>{objectOfMultipleTypes.kursFe1}</code>
+      <br />
+      <code>{objectOfMultipleTypes.kursFe2}</code>
+      <br />
+      <code>{objectOfMultipleTypes.kursFe3}</code>
+      <br />
+      <code>{objectOfMultipleTypes.kursFe4()}</code>
+      <br />
+      <code>{objectOfMultipleTypes['zuza']['daneOsobowe']}</code>
+      <br />
+      <code>{mergeObjects()}</code>
     </div>
   );
+  function mergeObjects() {
+    const object1 = { foo: 'bar' };
+    const object2 = { name: 'Zuza' };
+    const resultOfMerging = { ...object1, ...object2 };
+
+    console.log('mergeObjects', resultOfMerging);
+
+    return resultOfMerging.name;
+  }
 
   function SameNumbers() {
     const array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
