@@ -1,0 +1,46 @@
+.original-tags {
+}
+
+.faked-tags {
+}
+.faked-title {
+  display: block;
+  font-size: xx-large;
+  font-weight: bold;
+  padding-bottom: 25px;
+}
+.data {
+  font-size: small;
+}
+.bold-text {
+  font-weight: bold;
+}
+.smaller-title {
+  font-size: large;
+  padding-top: 25px;
+  font-weight: bold;
+  padding-bottom: 25px;
+}
+.smaller-title-2 {
+  font-size: large;
+  padding-top: 25px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.subpoint {
+  font-size: small;
+  padding-top: 0px;
+  font-weight: bold;
+  padding-bottom: 25px;
+}
+.expunction {
+  text-decoration: line-through;
+}
+.italic {
+  font-style: italic;
+}
+.list {
+  list-style-position: inside;
+  list-style-type: disc;
+  margin-left: 25px;
+}
