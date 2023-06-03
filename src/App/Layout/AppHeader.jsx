@@ -1,27 +1,27 @@
 import React from 'react';
-import { Logo } from '../Components/Logo/Logo';
-import './styles/header.css';
 
-import { HeaderMenu } from '../Components/HeaderMenu/HeaderMenu' ;
+import '../Components/HeaderMenu/styles.css';
 
+import { HeaderMenu } from '../Components/HeaderMenu/HeaderMenu';
+
+const Logo = () => (
+  <a href="/">
+    {' '}
+    <img
+      style={{ width: 50 }}
+      src={'http://placekitten.com/500/500'}
+      className="logo"
+      alt="logo"
+    />
+  </a>
+);
 
 export function AppHeader() {
   return (
     <header>
-      <div>
-        <Logo/>
-        <HeaderMenu/>
-        <div className="name-surname-container"> 
-        <h4>Wojciech</h4>
-        <h5>kursant</h5> 
-        </div>
-        
-      </div>
+      <Logo />
+
+      <HeaderMenu />
     </header>
-    
   );
-
-
 }
-
-;
