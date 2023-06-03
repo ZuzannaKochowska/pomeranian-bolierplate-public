@@ -1,0 +1,10 @@
+div {
+  text-align: center;
+
+  display: grid;
+  justify-content: space-around;
+}
+.row2 {
+  display: flex;
+  justify-content: space-around;
+}
