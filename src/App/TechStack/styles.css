@@ -1,7 +1,7 @@
-div {
+.row1 {
   text-align: center;
 
-  display: grid;
+  display: flex;
   justify-content: space-around;
 }
 .row2 {
