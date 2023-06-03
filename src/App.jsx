@@ -9,7 +9,7 @@ import { Exercises } from './App/Exercises';
 import { Settings } from './App/Settings';
 import { Calendar } from './App/Calendar';
 import { Blog } from './App/Blog';
-// import { TechStack } from './App/TechStack/TechStack';
+import { TechStack } from './App/TechStack/TechStack';
 
 export function App() {
   return (
@@ -25,7 +25,7 @@ export function App() {
           <Route path="Settings/*" element={<Settings />} />
           <Route path="blocks/*" element={<Blocks />} />
           <Route path="*" element={<NotFound />} />
-          {/* <Route path="TechStack" element={<TechStack/>} /> */}
+          <Route path="TechStack" element={<TechStack />} />
         </Route>
       </Routes>
     </BrowserRouter>
