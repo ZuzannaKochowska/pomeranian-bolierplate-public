@@ -1,0 +1,8 @@
+.menu {
+  display: flex;
+  padding: 0px;
+  width: 600px;
+}
+.menu-label {
+  font-weight: bold;
+}
