@@ -33,11 +33,12 @@ function generateBoard(size) {
   });
 }
 export const Playground = ({ boardSize }) => {
-  const [board, setBoard] = useState(generateBoard(boardSize));
+  const [board, setBoard] = useState(generateBoard(16));
+  console.log(board);
   return (
     <div className="board">
-      {board.map(() => {
-        return <div className="board-field"></div>;
+      {board.map((element) => {
+        return <div className="board-field">{element.value}</div>;
       })}
 
       <div className="board-field"></div>
