@@ -8,16 +8,20 @@ function shuffleArray(s) {
   }
   return s;
 }
+
 const alpha = Array.from(Array(26)).map((e, i) => i + 65);
 const alphabet = alpha.map((x) => String.fromCharCode(x));
 
 const getRandomLetters = (amount) => {
+  // dopytać Szymona dlaczego Math.random()
   const shuffled = [...alphabet].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, amount);
 };
 
-function generateBoard(size) {
+
+function generateBoard(size)  {
   const randomLetters = getRandomLetters(size / 2);
+
   const letters = randomLetters.map((letter) => {
     return {
       id: null,
@@ -26,26 +30,41 @@ function generateBoard(size) {
     };
   });
 
+
   const mergedLetters = [...letters, ...letters];
 
   return shuffleArray(mergedLetters).map((obj, index) => {
     return { ...obj, id: index + 1 };
   });
 }
+
 export const Playground = ({ boardSize }) => {
   const [firstClickedFieldId, setFirstClickedFieldId] = useState();
   const [secondClickedFieldId, setSecondClickedFieldId] = useState();
   const [board, setBoard] = useState(generateBoard(boardSize));
 
   const handleClick = (object) => {
-    const isFirstClickedSetAndIsDifferentThanPrev = firstClickedFieldId && firstClickedFieldId != object.id
-    if (isFirstClickedSetAndIsDifferentThanPrev) {secondClickedFieldId(object.id)} else { 
-      firstClickedFieldId(object.id);
+    const isFirstClickedSetAndIsDifferentThanPrev = firstClickedFieldId && firstClickedFieldId !== object.id;
+    if (isFirstClickedSetAndIsDifferentThanPrev) {
+      setSecondClickedFieldId(object.id);
+      resetFirstClickedFieldId();
+    } else { 
+      setFirstClickedFieldId(object.id);
+     resetSecondClickedFieldId();
     }
-    
-    console.log(object);
   };
-  console.log(board);
+
+  const resetFirstClickedFieldId = () => {
+    setTimeout(()=>{
+      setFirstClickedFieldId(undefined)
+    }, 1000);
+  };
+
+  
+
+  const resetSecondClickedFieldId = () => {
+    setTimeout(()=>{setSecondClickedFieldId(undefined)}, 5000);
+  };
 
   return (
     <div className="board">
