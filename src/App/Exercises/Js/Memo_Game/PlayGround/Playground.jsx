@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
 import './Playground.css';
+import { useState, useEffect } from 'react';
 
 function shuffleArray(s) {
   for (let i = s.length - 1; i > 0; i--) {
@@ -35,7 +35,7 @@ function generateBoard(size) {
 export const Playground = ({ boardSize }) => {
   const [firstClickedFieldId, setFirstClickedFieldId] = useState();
   const [secondClickedFieldId, setSecondClickedFieldId] = useState();
-  const [board, setBoard] = useState(generateBoard(16));
+  const [board, setBoard] = useState(generateBoard(boardSize));
 
   const handleClick = (object) => {
     const isFirstClickedSetAndIsDifferentThanPrev = firstClickedFieldId && firstClickedFieldId != object.id
