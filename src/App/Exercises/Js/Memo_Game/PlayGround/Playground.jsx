@@ -33,12 +33,33 @@ function generateBoard(size) {
   });
 }
 export const Playground = ({ boardSize }) => {
+  const [firstClickedFieldId, setFirstClickedFieldId] = useState();
+  const [secondClickedFieldId, setSecondClickedFieldId] = useState();
   const [board, setBoard] = useState(generateBoard(16));
+
+  const handleClick = (object) => {
+    const isFirstClickedSetAndIsDifferentThanPrev = firstClickedFieldId && firstClickedFieldId != object.id
+    if (isFirstClickedSetAndIsDifferentThanPrev) {secondClickedFieldId(object.id)} else { 
+      firstClickedFieldId(object.id);
+    }
+    
+    console.log(object);
+  };
   console.log(board);
+
   return (
     <div className="board">
       {board.map((element) => {
-        return <div className="board-field">{element.value}</div>;
+
+        const isClicked = firstClickedFieldId === element.id || secondClickedFieldId === element.id
+        const canShowValue = isClicked === element.isPaired;
+        const clickedFieldClassName = isClicked ? 'field-clicked' : '';
+        const pairedFieldClassName =  element.isPaired ? 'field-paired' : '';
+        return (
+        <div className={`board-field ${clickedFieldClassName} ${pairedFieldClassName}`} onClick={() => handleClick(element)}>
+          {canShowValue && element.value}
+          </div>
+        );
       })}
 
       <div className="board-field"></div>
