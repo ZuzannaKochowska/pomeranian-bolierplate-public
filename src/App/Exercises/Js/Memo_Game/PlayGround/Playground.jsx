@@ -13,7 +13,7 @@ const alpha = Array.from(Array(26)).map((e, i) => i + 65);
 const alphabet = alpha.map((x) => String.fromCharCode(x));
 
 const getRandomLetters = (amount) => {
-  // dopytać Szymona dlaczego Math.random()
+  
   const shuffled = [...alphabet].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, amount);
 };
@@ -48,10 +48,10 @@ export const Playground = ({ boardSize }) => {
   const isFirstClickedSetAndIsDifferentThanPrev = firstClickedFieldId && firstClickedFieldId !== object.id;
     if (isFirstClickedSetAndIsDifferentThanPrev) {
       setSecondClickedFieldId(object.id);
-      // resetFirstClickedFieldId();
+      resetFirstClickedFieldId();
     } else { 
       setFirstClickedFieldId(object.id);
-    //  resetSecondClickedFieldId();
+     resetSecondClickedFieldId();
     }
   };
 
@@ -71,9 +71,12 @@ export const Playground = ({ boardSize }) => {
 
     if (firstClickedFieldValue === secondClickedFieldValue) {
       setBoard(board.map((field) => {
+        // const isClickedFieldPaired = field.id === firstClickedFieldId || field.id === secondClickedFieldId;
+        
         return {
           ...field,
-          isPaired: true,
+          isPaired: field.isPaired ? true : firstClickedFieldId === field.id && secondClickedFieldId === field.id
+          
         }
       }))
 
@@ -87,8 +90,8 @@ export const Playground = ({ boardSize }) => {
     <div className="board">
       {board.map((element) => {
 
-        const isClicked = firstClickedFieldId === element.id || secondClickedFieldId === element.id
-        const canShowValue = isClicked === element.isPaired;
+        const isClicked = firstClickedFieldId === element.id || secondClickedFieldId === element.id;
+        const canShowValue = isClicked || element.isPaired;
         const clickedFieldClassName = isClicked ? 'field-clicked' : '';
         const pairedFieldClassName =  element.isPaired ? 'field-paired' : '';
         return (

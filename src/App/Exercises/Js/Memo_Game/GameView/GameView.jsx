@@ -1,18 +1,32 @@
 import './styles.css';
 import { Button } from '../Button/Button';
 import { Menu } from '../Menu/Menu';
-export const GameView = ({ setGameStarted }) => {
+import { useEffect, useState } from 'react';
+
+export const GameView = ({ setGameStartedMemo, amount }) => {
+  const [memoTime, setMemoTime] = useState(0);
+
+  useEffect(() => {
+    const setTheTime = setTimeout(() => {
+      memoTime >= 0 && setMemoTime(memoTime + 1);
+    }, 1000);
+    return () => clearTimeout(setTheTime);
+  }, [memoTime]);
+
   return (
     <>
       <Menu label="czas gry">
-        <Button isDisabled={true}>1:35</Button>
+        <Button isDisabled={true}>{memoTime}</Button>
       </Menu>
       <Menu label="Liczba ruchów">
-        <Button isDisabled={true}>2</Button>
+        <Button isDisabled={true}>{amount}</Button>
       </Menu>
       <Menu label="Przyciski sterujące">
-        <Button onClick={() => setGameStarted(false)}>STOP</Button>
+        <Button 
+        isControl={true}
+        onClick={() => setGameStartedMemo(false)}>STOP</Button>
       </Menu>
     </>
+    
   );
 };
