@@ -19,7 +19,7 @@ const getRandomLetters = (amount) => {
 };
 
 
-function generateBoard(size)  {
+function generateBoard (size)  {
   const randomLetters = getRandomLetters(size / 2);
 
   const letters = randomLetters.map((letter) => {
@@ -36,7 +36,8 @@ function generateBoard(size)  {
   return shuffleArray(mergedLetters).map((obj, index) => {
     return { ...obj, id: index + 1 };
   });
-}
+};
+
 
 export const Playground = ({ boardSize }) => {
   const [firstClickedFieldId, setFirstClickedFieldId] = useState();
@@ -44,27 +45,43 @@ export const Playground = ({ boardSize }) => {
   const [board, setBoard] = useState(generateBoard(boardSize));
 
   const handleClick = (object) => {
-    const isFirstClickedSetAndIsDifferentThanPrev = firstClickedFieldId && firstClickedFieldId !== object.id;
+  const isFirstClickedSetAndIsDifferentThanPrev = firstClickedFieldId && firstClickedFieldId !== object.id;
     if (isFirstClickedSetAndIsDifferentThanPrev) {
       setSecondClickedFieldId(object.id);
-      resetFirstClickedFieldId();
+      // resetFirstClickedFieldId();
     } else { 
       setFirstClickedFieldId(object.id);
-     resetSecondClickedFieldId();
+    //  resetSecondClickedFieldId();
     }
   };
 
   const resetFirstClickedFieldId = () => {
     setTimeout(()=>{
       setFirstClickedFieldId(undefined)
-    }, 1000);
+    }, 5000)
   };
-
-  
-
   const resetSecondClickedFieldId = () => {
-    setTimeout(()=>{setSecondClickedFieldId(undefined)}, 5000);
+    setTimeout(()=>{setSecondClickedFieldId(undefined)}, 5000)
   };
+
+  useEffect(() => {
+    if (firstClickedFieldId && secondClickedFieldId) {
+      const firstClickedFieldValue = board.find((item) => item.id === firstClickedFieldId).value;
+      const secondClickedFieldValue = board.find((item) => item.id === secondClickedFieldId).value;
+
+    if (firstClickedFieldValue === secondClickedFieldValue) {
+      setBoard(board.map((field) => {
+        return {
+          ...field,
+          isPaired: true,
+        }
+      }))
+
+    }
+    }
+     
+  }, [firstClickedFieldId, secondClickedFieldId])
+  console.log(board);
 
   return (
     <div className="board">
