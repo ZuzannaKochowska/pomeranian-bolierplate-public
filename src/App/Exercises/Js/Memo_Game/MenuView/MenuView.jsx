@@ -1,18 +1,46 @@
 import './styles.css';
 import { Menu } from '../Menu/Menu';
 import { Button } from '../Button/Button';
+import { SelectButtonsMemo } from '../SelectButton/SelectButtonMemo';
 
-export const MenuView = ({ setGameStarted }) => {
+export const MenuView = ({ setGameStarted, setBoardSize, myTime, amount, gameEnded, setAmount, boardSize }) => {
   return (
     <>
-      <Menu label="Liczba elementów">
-        <Button>8 elementów</Button>
-        <Button>16 elementów</Button>
-        <Button>20 elementów</Button>
-      </Menu>
-      <Menu label="Przyciski sterujące">
-        <Button onClick={() => setGameStarted(true)}>START</Button>
-      </Menu>
-    </>
-  );
-};
+    {gameEnded && <p>Twój wynik to {boardSize/2} znalezionych par w czasie {myTime} prz użyciu {amount} kliknięć </p>}
+      <Menu label="Liczba Elementów">
+        <SelectButtonsMemo
+        setValue={setBoardSize}
+        options ={[
+          {
+          value: 8,
+          content: '8 elementów',
+          isActive: false,
+          },
+          {
+            value: 16,
+            content: '16 elementów',
+            isActive: false,
+            },
+            {
+              value: 20,
+              content: '20 elementów',
+              isActive: false,
+              },
+            ]}
+        
+            />
+            </Menu>
+          <Menu label="Przyciski Sterujące">
+            <Button
+            isControl={true}
+            onClick={() => {
+              setGameStarted(true);
+              setAmount(0)
+            }}
+            >
+            Start
+            </Button>
+          </Menu>
+        </>
+      );
+    };

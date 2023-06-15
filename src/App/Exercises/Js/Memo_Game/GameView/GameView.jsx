@@ -3,7 +3,7 @@ import { Button } from '../Button/Button';
 import { Menu } from '../Menu/Menu';
 import { useEffect, useState } from 'react';
 
-export const GameView = ({ setGameStartedMemo, amount }) => {
+export const GameView = ({ setGameStartedMemo, amount, time, setAmount }) => {
   const [memoTime, setMemoTime] = useState(0);
 
   useEffect(() => {
@@ -14,19 +14,27 @@ export const GameView = ({ setGameStartedMemo, amount }) => {
   }, [memoTime]);
 
   return (
-    <>
-      <Menu label="czas gry">
-        <Button isDisabled={true}>{memoTime}</Button>
-      </Menu>
-      <Menu label="Liczba ruchów">
-        <Button isDisabled={true}>{amount}</Button>
-      </Menu>
-      <Menu label="Przyciski sterujące">
-        <Button 
+    <div>
+    <Menu label="Czas gry">
+      <Button isDisabled={true}>{time}</Button>
+    </Menu>
+    <Menu label="Liczba ruchów">
+      <Button isDisabled={true}>{amount}</Button>
+    </Menu>
+    <Menu label="Przyciski sterujące">
+      <Button
         isControl={true}
-        onClick={() => setGameStartedMemo(false)}>STOP</Button>
-      </Menu>
-    </>
+        onClick={() => {
+          setGameStartedMemo(false);
+          setAmount(0);
+        }}
+        
+      >
+        PASS
+      </Button>
+    </Menu>
+  </div>
+
     
   );
 };

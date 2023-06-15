@@ -1,6 +1,9 @@
 import './Playground.css';
 import { useState, useEffect } from 'react';
-
+import { Menu } from '../Menu/Menu';
+import { SelectButtonsMemo } from '../SelectButton/SelectButtonMemo';
+import './Playground.css';
+ 
 function shuffleArray(s) {
   for (let i = s.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -19,7 +22,7 @@ const getRandomLetters = (amount) => {
 };
 
 
-function generateBoard (size)  {
+function generateBoard(size)  {
   const randomLetters = getRandomLetters(size / 2);
 
   const letters = randomLetters.map((letter) => {
@@ -71,7 +74,7 @@ export const Playground = ({ boardSize }) => {
 
     if (firstClickedFieldValue === secondClickedFieldValue) {
       setBoard(board.map((field) => {
-        // const isClickedFieldPaired = field.id === firstClickedFieldId || field.id === secondClickedFieldId;
+        const isClickedFieldPaired = field.id === firstClickedFieldId || field.id === secondClickedFieldId;
         
         return {
           ...field,

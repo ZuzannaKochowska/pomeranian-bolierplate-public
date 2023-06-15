@@ -9,7 +9,12 @@ import { clear } from '@testing-library/user-event/dist/clear';
 export function Memo_Game() {
   const [isGamestarted, setGameStarted] = useState(false);
   const [time, setTime] = useState(0);
-  const [timeInterval, setTimeInterval] = useState()
+  const [timeInterval, setTimeInterval] = useState();
+  const [boardSize, setboardSize] = useState()
+  const[amount, setAmount] = useState(0);
+  const[gameEnded, setGameEnded] = useState(false);
+  const[myTime, setMyTime] = useState(0);
+
 
   useEffect(()=> {
     if (isGamestarted) {
@@ -32,11 +37,20 @@ export function Memo_Game() {
         Gra polegająca na zapamiętywaniu odkrytych kafli i łączeniu ich w pary{' '}
       </p>
       {isGamestarted ? (
-        <GameView setGameStarted={setGameStarted} />
+        <GameView setGameStarted={setGameStarted} time={time} amount={amount} setAmout={setAmount} />
       ) : (
-        <MenuView setGameStarted={setGameStarted} />
+        <MenuView setGameStarted={setGameStarted} setBoardSize={setboardSize} myTime={myTime} setAmount={setAmount} amount={amount} gameEnded={gameEnded} boardSize={boardSize}  />
       )}
-      {isGamestarted && <Playground />}
+      {isGamestarted && (<Playground 
+      boardSize={boardSize} 
+      setGameStarted={setGameStarted}
+      amount={amount} 
+      setAmount={setAmount} 
+      time={time}
+      setMyTime={setMyTime}
+      setGameEnded={setGameEnded} 
+      gameEnded={gameEnded}
+      />) }
     </div>
   );
 }
