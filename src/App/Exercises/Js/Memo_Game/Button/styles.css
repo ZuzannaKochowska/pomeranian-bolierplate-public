@@ -1,7 +1,7 @@
 .button {
   margin: 10px;
   padding: 10px 20px;
-  background-color: #428d0a;
+  background-color: #2199da;
   color: #fff;
   border-radius: 10px;
   border: none;
@@ -13,10 +13,22 @@
   background-color: #106a9a;
   cursor: pointer;
 }
+
 .button-active {
-  background-color: #16a53a;
+  background-color: #fe3756;
 }
+
 .button:disabled {
-  background-color: gray;
+  background-color: #ababab;
   cursor: initial;
+}
+
+.button-control {
+  background-color: #fe3756;
+  color: white;
+}
+
+.button-control:hover {
+  background-color: rgb(171, 8, 8);
+  color: white;
 }

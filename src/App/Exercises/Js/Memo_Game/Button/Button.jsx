@@ -1,16 +1,25 @@
 import './styles.css';
 
-export const Button = ({ onClick, children, isDisabled, isActive }) => {
-  const activeClass = isActive ? 'active' : '';
+export const Button = ({
+  onClick,
+  children,
+  isDisabled,
+  isActive,
+  isControl,
+}) => {
   return (
-    <button
-      className={`button ${activeClass}`}
-      onClick={onClick}
-      disabled={isDisabled}
-      isActive={isActive}
-    >
-      {' '}
-      {children}
-    </button>
+    <div>
+      <button
+        onClick={onClick}
+        disabled={isDisabled}
+        className={`button ${isActive ? 'button-active' : ''} ${
+          isControl ? `button-control` : ''
+        }`}
+        isActive={isActive}
+        isControl={isControl}
+      >
+        {children}
+      </button>
+    </div>
   );
 };
