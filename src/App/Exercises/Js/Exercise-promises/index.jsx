@@ -20,6 +20,37 @@ export function Exercise_promises(personalData, apiData) {
 
   }, [ getState]);
 
+  function logPromiseState(promise) {
+    promise
+    .then(() => { //success
+      console.log('Stan: fullfilled');
+      console.log('Promise zakończony sukcesem');
+    })
+    .catch(() => { //failed
+      console.log('Stan: rejected');
+      console.log('Promise zakonczony błędem');
+    })
+    .finally(() => {//nevermind, I will do this
+      console.log('Stan: ');
+      console.log('Promise zakonczony ');
+    })
+  }
+ 
+
+  const myPromise = new Promise((resolve, rejected) => {
+    setTimeout(() => {
+      const random = Math.random();
+
+      if(random < 0.5) {
+        resolve();
+      } else {
+        rejected();
+      }
+
+    })
+    logPromiseState(myPromise);
+  });
+
   return(
     <div> dziala </div>
   )
