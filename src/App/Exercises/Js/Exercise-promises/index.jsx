@@ -38,7 +38,7 @@ export function Exercise_promises(personalData, apiData) {
  
 
   const myPromise = new Promise((resolve, rejected) => {
-    setTimeout(() => {
+    setTimeout(() => { 
       const random = Math.random();
 
       if(random < 0.5) {
