@@ -7,7 +7,7 @@ export const Button = ({ children, isActive, onClick }) => {
   return (
     <button
       className={`button ${isActive ? 'button-active' : ''}`}
-      onCLick={onClick}
+      onClick={onClick}
     >
       {children}
     </button>

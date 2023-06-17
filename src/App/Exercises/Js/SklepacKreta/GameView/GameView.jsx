@@ -21,7 +21,7 @@ export const GameView = ({setGameStarted, score, setScore}) => {
           setScore(0);
         }}>STOP</Button>
       </Menu>
-      <Playground/>
+      
     </>
   );
 };

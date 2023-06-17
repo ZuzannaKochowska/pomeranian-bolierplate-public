@@ -1,10 +1,10 @@
 import { Button } from './Button/Button';
 import { Menu } from './Menu/Menu';
 import { GameView } from './GameView/GameView';
-
 import { Playground } from './PlayGround/Playground';
-import './styles.css';
+// import './styles.css';
 import {useState, onClick} from 'react';
+import './Button/Button.css';
 
 export function SklepacKreta() {
   const [isGameStarted, setGameStarted] = useState(false);
