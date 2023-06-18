@@ -1,7 +1,10 @@
 import { Button } from '../Button/Button';
 import { Menu } from '../Menu/Menu';
+import { Playground } from '../PlayGround/Playground';
 
-export const GameView = ({}) => {
+import './GameView.css';
+
+export const GameView = ({setGameStarted, score, setScore}) => {
   return (
     <>
       <Menu label="Czas do końca">
@@ -13,8 +16,12 @@ export const GameView = ({}) => {
       </Menu>
 
       <Menu label="Przyciski sterujące">
-        <Button onClick={() => {}}>Stop</Button>
+        <Button onClick={() => {
+          setGameStarted(false);
+          setScore(0);
+        }}>STOP</Button>
       </Menu>
+      
     </>
   );
 };
