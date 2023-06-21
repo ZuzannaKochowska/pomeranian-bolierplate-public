@@ -11,6 +11,7 @@ import { blockRouterMetaData as blockRouterMetaSklepacKreta } from './SklepacKre
 import { blockRouterMetaData as blockRouterMetaMemoryGame } from './Memo_Game/router-data';
 import { blockRouterMetaData as blockRouterMetaPromises } from './Exercise-promises/router-data';
 import { blockRouterMetaData as blockRouterMetaPromisesUseEffect } from './Exercise-js-promise-useEffect/router-data';
+import { blockRouterMetaData as blockRouterMetaSingleTask  } from './ToDo/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -23,6 +24,7 @@ export const blockRouterMetaData = [
   blockRouterMetaSklepacKreta,
   blockRouterMetaMemoryGame,
   blockRouterMetaPromises,
-  blockRouterMetaPromisesUseEffect
+  blockRouterMetaPromisesUseEffect,
+  blockRouterMetaSingleTask
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
