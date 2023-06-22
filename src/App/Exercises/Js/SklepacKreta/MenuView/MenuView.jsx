@@ -13,16 +13,19 @@ return (
       label: '1 minuta',
       isActive: false,
       value: 1,
+      
     },
     {
       label: '2 minuta',
       isActive: true,
       value: 2,
+      
     },
     {
       label: '3 minuta',
       isActive: false,
       value: 3,
+      
     },
   ]} 
   /> 
@@ -35,16 +38,19 @@ return (
       label: '1 kret',
       isActive: true,
       value: 1,
+      
     },
     {
       label: '2 krety',
       isActive: false,
       value: 2,
+      
     },
     {
       label: '3 krety',
       isActive: false,
       value: 3,
+      
     },
   ]} /> 
       </Menu>

@@ -4,7 +4,7 @@ import { Playground } from '../PlayGround/Playground';
 
 import './GameView.css';
 
-export const GameView = ({setGameStarted, score, setScore}) => {
+export const GameView = ({ setGameStarted, score, setScore }) => {
   return (
     <>
       <Menu label="Czas do końca">
@@ -12,16 +12,19 @@ export const GameView = ({setGameStarted, score, setScore}) => {
       </Menu>
 
       <Menu label="Wynik">
-        <div className="value-field">{2}</div>
+        <div className="value-field">{score}</div>
       </Menu>
 
       <Menu label="Przyciski sterujące">
-        <Button onClick={() => {
-          setGameStarted(false);
-          setScore(0);
-        }}>STOP</Button>
+        <Button
+          onClick={() => {
+            setGameStarted(false);
+            setScore(0);
+          }}
+        >
+          STOP
+        </Button>
       </Menu>
-      
     </>
   );
 };
