@@ -4,6 +4,13 @@ import { Playground } from './PlayGround/Playground';
 import { useState, onClick } from 'react';
 import './Button/Button.css';
 import { MenuView } from '../SklepacKreta/MenuView/MenuView';
+import { getByRole } from '@testing-library/react';
+
+// TODO:
+// - gdy timer = 0 -> koniec gry
+// - możliwość wyboru czasu (1min, 2min, 3min)
+// - komponent do wyświetlania wyniku
+// - na kliknięciu stop - pokaż wyniki i zakończ grę
 
 export function SklepacKreta() {
   const [isGameStarted, setGameStarted] = useState(false);
