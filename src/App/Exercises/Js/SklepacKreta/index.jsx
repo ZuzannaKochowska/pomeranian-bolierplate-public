@@ -4,7 +4,6 @@ import { Playground } from './PlayGround/Playground';
 import { useState, onClick } from 'react';
 import './Button/Button.css';
 import { MenuView } from '../SklepacKreta/MenuView/MenuView';
-import { getByRole } from '@testing-library/react';
 
 // TODO:
 // - gdy timer = 0 -> koniec gry
