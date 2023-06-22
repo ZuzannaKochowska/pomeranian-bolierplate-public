@@ -4,7 +4,7 @@ import { Playground } from './PlayGround/Playground';
 // import './styles.css';
 import {useState, onClick} from 'react';
 import './Button/Button.css';
-import { MenuView } from '../Memo_Game/MenuView/MenuView';
+import { MenuView } from '../SklepacKreta/MenuView/MenuView';
 
 export function SklepacKreta() {
   const [isGameStarted, setGameStarted] = useState(false);

@@ -11,19 +11,19 @@ return (
   <SelectButtons options={[
     {
       label: '1 minuta',
-      isActive: true,
+      isActive: false,
       value: 1,
     },
     {
       label: '2 minuta',
-      isActive: false,
+      isActive: true,
       value: 2,
     },
     {
       label: '3 minuta',
       isActive: false,
       value: 3,
-    }
+    },
   ]} 
   /> 
   </Menu>
