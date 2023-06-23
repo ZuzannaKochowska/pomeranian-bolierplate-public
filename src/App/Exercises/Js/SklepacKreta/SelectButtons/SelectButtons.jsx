@@ -1,11 +1,10 @@
 import './SelectButtons.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '../Button/Button';
 
 export const SelectButtons = (props) => {
   //props.options
-  const { options } = props;
-
+  const { options, setOptionChosen } = props;
   const [newOptions, setNewOptions] = useState(options);
 
   const handleClick = (value) => {
@@ -13,10 +12,13 @@ export const SelectButtons = (props) => {
       newOptions.map((option) => {
         return {
           ...option,
-          isActive: option.value === value,
+          isActive: option.value === value ? true : false,
         };
       })
     );
+
+    const chosenOption = newOptions.find((option) => option.value === value);
+    setOptionChosen(chosenOption.value * 60);
   };
   return (
     <>

@@ -4,26 +4,29 @@ import { useState, useEffect } from 'react';
 
 import './GameView.css';
 
-export const GameView = ({ setGameStarted, score, setScore }) => {
-  const [counter, setCounter] = useState(60);
-
-  useEffect(() => {
-    if (counter == 0) {
-      setGameStarted(false);
-    }
-  }, [counter]);
-
+export const GameView = ({
+  setGameStarted,
+  score,
+  setScore,
+  options,
+  time,
+  setTime,
+}) => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      counter > 0 && setCounter(counter - 1);
+      time > 0 && setTime(time - 1);
     }, 1000);
     return () => clearTimeout(timeoutId);
-  }, [counter]);
+  }, [time]);
+
+  if (time == 0) {
+    setGameStarted(false);
+  }
 
   return (
     <>
       <Menu label="Czas do końca">
-        <div className="value-field">{counter}</div>
+        <div className="value-field">{time}</div>
       </Menu>
 
       <Menu label="Wynik">

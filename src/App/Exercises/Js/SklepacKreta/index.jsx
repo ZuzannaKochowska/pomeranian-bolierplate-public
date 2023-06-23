@@ -1,7 +1,7 @@
 import { GameView } from './GameView/GameView';
 import { Playground } from './PlayGround/Playground';
 // import './styles.css';
-import { useState, onClick } from 'react';
+import { useState, onClick, useEffect } from 'react';
 import './Button/Button.css';
 import { MenuView } from '../SklepacKreta/MenuView/MenuView';
 
@@ -14,6 +14,11 @@ import { MenuView } from '../SklepacKreta/MenuView/MenuView';
 export function SklepacKreta() {
   const [isGameStarted, setGameStarted] = useState(false);
   const [score, setScore] = useState(0);
+  const [time, setTime] = useState(60);
+
+  useEffect(() => {
+    time === 0 && setGameStarted(false);
+  }, [time]);
 
   return (
     <div className="hit-the-mole">
@@ -27,10 +32,16 @@ export function SklepacKreta() {
           setGameStarted={setGameStarted}
           score={score}
           setScore={setScore}
+          time={time}
+          setTime={setTime}
         />
       ) : (
         <>
-          <MenuView setGameStarted={setGameStarted} />
+          <MenuView
+            time={time}
+            setTime={setTime}
+            setGameStarted={setGameStarted}
+          />
         </>
       )}
       {isGameStarted && <Playground score={score} setScore={setScore} />}
