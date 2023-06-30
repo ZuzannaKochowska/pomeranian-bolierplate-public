@@ -34,8 +34,8 @@ export function SklepacKreta() {
           setScore={setScore}
           time={time}
           setTime={setTime}
-          isGameStopped={isGameStopped}
-          setGameStopped={setGameStopped}
+          // isGameStopped={isGameStopped}
+          // setGameStopped={setGameStopped}
         />
       ) : (
         <>
