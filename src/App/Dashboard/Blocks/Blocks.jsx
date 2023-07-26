@@ -1,10 +1,13 @@
-import { ReactComponent as snowwolft } from '../../Images/startItlogo.svg';
+import Snowwolft from '../../Images/startItlogo.svg';
+import Wavinghand from '../../Images/waving-hand.svg';
 import TechStack from '../../TechStack/TechStack';
 
 export const Blocks = () => {
   return (
     <div className="dashboard-tiles-container">
-      <h2>Hej, tu Zuza!</h2>
+      <h2>
+        <img src={Wavinghand} alt="hand" /> Hej, tu Zuza!
+      </h2>
       <p>Poniżej znajdziesz najważniejsze informacje o mojej działalności:</p>
       <div className="dashboard-tiles">
         <div>
@@ -23,13 +26,13 @@ export const Blocks = () => {
         </div>
         <div>
           <p className="dashboard-tile-title">Edukacja</p>
-          {/* <img src={snowwolft} alt="icon tech stack" /> */}
+          <img src={Snowwolft} alt="icon tech stack" />
           <p className="dashboard-tile-description">Przebyte kursy</p>
         </div>
         <div>
           <p className="dashboard-tile-title">Tech stack</p>
 
-          {/* <img src={snowwolft} alt="icon tech stack" /> */}
+          <img src={Snowwolft} alt="icon tech stack" />
           <p className="dashboard-tile-description">
             Stack technologiczny realizowany na kursie
           </p>
