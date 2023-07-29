@@ -10,3 +10,20 @@
 .dashboard > div {
   padding: 1rem;
 }
+.dashboard-tile-title {
+}
+
+.dashboard-tile-description {
+}
+.dashboard-description {
+  width: 645px;
+  height: 34px;
+  top: 196px;
+  left: 266px;
+}
+.more-info {
+  color: grey;
+  margin-bottom: 30px;
+  width: 153px;
+  height: 153px;
+}
