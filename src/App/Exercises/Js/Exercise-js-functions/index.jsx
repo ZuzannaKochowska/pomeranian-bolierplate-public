@@ -9,6 +9,32 @@ export function Exercise() {
     return `Witaj ${name}! Jesteś ${amount} uzytkownikiem odwiedzającym tę stronę!`;
   }
 
+  function trialFunction(height, width) {
+    return `Mój dom ma wysokość ${height} i szerokość ${width}`;
+  }
+
+  const list = [
+    {
+      name: 'Wojtek',
+      surname: 'Abc',
+      age: 48,
+    },
+    {
+      name: 'Kasia',
+      surname: 'Cbd',
+      age: 28,
+    },
+  ];
+
+  function displayList(list) {
+    return list.map((listElement) => (
+      <div>
+        Moje imię to {listElement.name}, nazwisko {listElement.surname}, wiek{' '}
+        {listElement.age}{' '}
+      </div>
+    ));
+  }
+
   return (
     <div>
       <p>Definiowanie funkcji</p>
@@ -32,6 +58,14 @@ export function Exercise() {
         <pre>
           <code>{getWelcomeMessage('Jon', 129384)}</code>
         </pre>
+        <pre>
+          <code>{trialFunction('3 metrów', '10 metrów')} </code>
+        </pre>
+      </section>
+
+      <section>
+        <h2> Lista ludzi w tablicy:</h2>
+        {displayList(list)}
       </section>
     </div>
   );
