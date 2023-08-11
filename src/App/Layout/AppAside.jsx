@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 
 import './styles/aside.css';
+import { SettingIcon } from '../Components/Icons/SettingIcon';
 
 export function AppAside() {
   return (

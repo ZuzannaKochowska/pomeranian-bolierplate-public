@@ -5,3 +5,16 @@
 .variable-string-placeholder {
   margin-left: 5px;
 }
+.playing-with-variables {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  color: brown;
+  border: 5px solid black;
+  border-radius: 6px;
+  text-align: center;
+  border-style: groove;
+  border-color: palevioletred;
+  border-width: 20px;
+}

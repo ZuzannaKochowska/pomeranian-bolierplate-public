@@ -2,11 +2,14 @@
   font-family: Chilanka;
 }
 .btn {
-  background-color: red;
+  background-color: #fe3756;
   color: white;
-  padding: 3px 6px;
+  margin-top: 50px;
+  padding: 20px, 36px, 20px, 36px;
   border-radius: 10px;
+  width: 326px;
+  height: 56px;
 }
 .przesun {
-  margin-left: 140px ;
+  margin-left: 140px;
 }
