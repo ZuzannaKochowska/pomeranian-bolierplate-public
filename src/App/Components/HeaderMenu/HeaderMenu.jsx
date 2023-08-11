@@ -5,9 +5,6 @@ import { MenuArrow } from '../Icons/MenuArrow';
 export function HeaderMenu() {
   return (
     <header>
-      <div className="lgo">
-        <a href="/">{''}</a>
-      </div>
       <div className="images-container">
         <SettingIcon />
         <div className="circular_image">
@@ -23,20 +20,3 @@ export function HeaderMenu() {
     </header>
   );
 }
-// =======
-
-// export function HeaderMenu () {
-//   return (
-//   <div className="images-container">
-//     <SettingIcon />
-//     <div className="circular_image">
-//       (img src="https://placekitten.com/500/500")
-//     </div>
-
-//     <MenuArrow className="menu-arrow" />
-//   </div>
-
-//   );
-
-// >>>>>>> master
-// }
