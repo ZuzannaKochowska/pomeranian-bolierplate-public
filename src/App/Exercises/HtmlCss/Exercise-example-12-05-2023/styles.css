@@ -1,15 +1,13 @@
-/* p {
-  font-size: x-large;
-}
-.tekstVelvet {
-
+div.selectors p {
+  font-size: 50px;
+  text-align: center;
 }
 div p:last-child {
-  font-size: 25;
+  font-size: 15px;
   color: grey;
 }
 div p:last-child::after {
-  content: "Przeczytaj więcej >";
+  content: 'Przeczytaj więcej >';
   display: block;
   cursor: pointer;
   color: blue;
@@ -18,64 +16,74 @@ p.my-custom-arrow.arrow-button {
   color: red;
 }
 
-a[href*="#"] {
+a[href*='#'] {
   border: red 1px solid;
-
 }
 div[data-position]:after {
-  content: '.' "attr(data-position) '.' "
-} */
-.blogposts {
-
+  content: '.' attr(data-position) '.';
 }
+div.hoverable {
+  transform: all 0.2s ease-in-out;
+}
+
+div.hoverable:hover {
+  border: red;
+  transform: scale(1.1);
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 12px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
 .blogposts .date {
-  /* font-family: "MADE-TOMMY"; */
+  font-family: 'MADE-TOMMY';
   font-style: normal;
   font-weight: 400;
   font-size: 10.5px;
-  line-height:24px;
-  ;
+  line-height: 24px;
 }
 
-.blogposts h1 { 
-  /* font-family: 'MADE TOMMY'; */ font-style: normal; 
-  font-weight: 800; 
-  font-size: 42px; 
-  line-height: 56px; 
-  color: #222222; }
-
-.blogposts p {
-  font-style: normal; 
-  font-weight: 400; 
-  font-size: 16px; 
-  line-height: 27px; 
+.blogposts h1 {
+  font-family: 'MADE TOMMY';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 56px;
   color: #222222;
+}
+.blogposts .text {
+  margin-left: 50px;
+  width: 912px;
+  height: 189px;
+  padding: 45px, 61px, 45px, 61px;
+}
+.blogposts .paragraph {
+  margin-left: 50px;
+  margin-top: 0px;
+}
+.blogposts .text2 {
+  margin-left: 50px;
+  margin-top: 20px;
+  width: 912px;
+  height: 85px;
+  padding: 45px, 61px, 45px, 61px;
+}
+.blogposts .text3 {
+  margin-left: 50px;
+  margin-top: 20px;
+  width: 912px;
+  height: 110px;
+  padding: 45px, 61px, 45px, 61px;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
 
-}
-.blogposts .author {
-  font-style: normal; 
-  font-weight: 700; 
-  font-size: 18px; 
-  line-height: 32px; 
-  color: rgba(34, 34, 34, 0.8);
-
-}
-.blogposts .blogpost {
-  padding: 45px 61px;
-  margin-bottom: 34px;
-}
-.blogposts .blogposts:last-child {
-  margin-bottom: 0;
-}
-.blogposts .blogposts ul li {
-  margin-bottom: 29px;
-}
-.blogposts .blogpost h1 {
-
-}
-.blogposts .blogpost span.date {
-
-}
-.blogposts .blogpost p.job {
-  
+  margin-top: 30px;
+  margin-left: 50px;
 }
