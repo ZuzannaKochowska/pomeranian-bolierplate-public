@@ -1,4 +1,4 @@
-import './styles.css';
+import './styles1.css';
 export function FloatsAndPositioning() {
   return (
     <div>
@@ -26,8 +26,8 @@ export function FloatsAndPositioning() {
       <div className="div3">
         {' '}
         <img
-          width="100px"
-          height="100px"
+          width="75px"
+          height="75px"
           src="https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg"
           alt="Image not found"
         />{' '}
@@ -49,7 +49,7 @@ export function FloatsAndPositioning() {
           scrambled it to make a type specimen book.{' '}
         </p>{' '}
       </div>{' '}
-      <div className="div5">Zapisz</div>{' '}
+      <div className="div5">Save as</div>{' '}
       <div className="div6">
         {' '}
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -67,8 +67,9 @@ export function FloatsAndPositioning() {
         vitae tortor condimentum lacinia quis. Quis enim lobortis scelerisque
         fermentum dui faucibus in ornare. Auctor elit sed vulputate mi.{' '}
       </div>{' '}
+      <br />
       <div className="div7">
-        {' '}
+        <br />{' '}
         <div className="div7_div div_relative">
           {' '}
           <div className="div7_div div_absolute"></div>{' '}
