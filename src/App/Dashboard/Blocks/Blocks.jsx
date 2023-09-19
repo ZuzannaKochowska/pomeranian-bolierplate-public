@@ -5,6 +5,7 @@ import Wavinghand from '../../Images/waving-hand.svg';
 import Book from '../../Images/book-saved.svg';
 import TechStack from '../../Images/tech-stack.svg';
 import Faq from '../../Images/faq.svg';
+import { NavLink } from 'react-router-dom';
 
 export const Blocks = () => {
   return (
@@ -39,7 +40,12 @@ export const Blocks = () => {
           <p className="dashboard-tile-description">Przebyte kursy</p>
         </div>
         <div>
-          <p className="dashboard-tile-title">Tech stack</p>
+          <NavLink
+            to="../../TechStack/TechStack.jsx"
+            className="dashboard-tile-title"
+          >
+            Tech stack
+          </NavLink>
 
           <img src={TechStack} alt="icon tech stack" />
           <p className="dashboard-tile-description">
