@@ -1,0 +1,14 @@
+.wszystkie {
+  flex-direction: row;
+}
+.imageBackground {
+  background-image: url('../../../Images/flower.jpg');
+  height: 300px;
+  width: 300px;
+  filter: blur(10px);
+  filter: grayscale(9%);
+  background-size: contain;
+  background-position: center;
+  background-position-x: 10px;
+  background-repeat: no-repeat;
+}
