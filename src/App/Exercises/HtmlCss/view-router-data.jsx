@@ -8,6 +8,7 @@ import { blockRouterMetaData as CssAnimations } from './CssAnimations/router-dat
 import { blockRouterMetaData as OwnAnimation } from './OwnAnimation/router-data';
 import { blockRouterMetaData as ExerciseMultimedia } from './ExerciseMultimedia/router-data';
 import { blockRouterMetaData as Zdjecia } from '../HtmlCss/Zdjecia/router-data';
+import { blockRouterMetaData as BoxModel } from './BoxModel/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaData121220231,
@@ -18,5 +19,6 @@ export const blockRouterMetaData = [
   OwnAnimation,
   ExerciseMultimedia,
   Zdjecia,
+  BoxModel,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
