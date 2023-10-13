@@ -1,16 +1,15 @@
 import './styles.css';
-import { NavLink } from 'react-router-dom';
 
 import strzalka from '../Images/chevron.png';
 import korytko from '../Images/korytko.png';
-import duzefaq from '../Images/duzefaq.png';
+// import duzefaq from '../Images/duzefaq.png';
 
 export function Faq() {
   return (
     <div>
       <h2 className="tytul">
-        {' '}
-        <img src={duzefaq} alt="duzefaq"></img>
+        {'<'}FAQ
+        {/* <img src={duzefaq} alt="duzefaq"></img> */}
       </h2>
       <div>Tutaj znajdź odpowiedzi na najczęściej zadawane pytania</div>
       <div className="blok1">
@@ -18,6 +17,7 @@ export function Faq() {
           <img src={strzalka} alt="strzalka"></img>Jak mogę zapisać się na
           szkolenie?
         </h3>
+        <hr></hr>
 
         <div>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
