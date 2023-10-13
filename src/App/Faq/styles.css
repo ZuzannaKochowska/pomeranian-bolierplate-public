@@ -7,7 +7,7 @@
   padding-bottom: 20px;
 }
 .blok1 {
-  width: 50rem;
+  width: 30rem;
   font-size: 13px;
   margin-top: 20px;
   box-sizing: content-box;
@@ -15,16 +15,17 @@
   background-color: white;
   border: 5px;
   border-style: outset;
-  padding: 10px 10px 20px 20px;
   margin-bottom: 20px;
   border-radius: 10px 10px 10px 10px;
+  line-height: 32px;
+  gap: inherit;
+  padding: 18px 24px 18px 24px;
 }
-.podtytul {
-  border: 10px;
-  background-color: blueviolet;
+.podtytulek {
+  border: solid 0px 0px 1px 0px;
 }
 .blok2 {
-  width: 50rem;
+  width: 30rem;
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 13px;
@@ -33,7 +34,7 @@
   background-color: white;
   border: 5px;
   border-style: outset;
-  padding: 10px 10px 10px 20px;
+  padding: 18px 24px 18px 24px;
   margin-bottom: 20px;
   border-radius: 10px 10px 10px 10px;
 }

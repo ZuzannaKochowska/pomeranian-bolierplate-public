@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route, BrowserRouter, Navigate } from 'react-router-dom';
-import { NotFound } from './App/Components/NotFound/NotFound';
 import { Blocks } from './App/Blocks';
 import { Layout } from './App/Layout';
 import { Dashboard } from './App/Dashboard';
@@ -25,7 +24,6 @@ export function App() {
           <Route path="Blog/*" element={<Blog />} />
           <Route path="Settings/*" element={<Settings />} />
           <Route path="blocks/*" element={<Blocks />} />
-          <Route path="*" element={<NotFound />} />
           <Route path="TechStack" element={<TechStack />} />
           <Route path="Faq" element={<Faq />} />
         </Route>
