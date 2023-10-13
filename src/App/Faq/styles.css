@@ -1,0 +1,39 @@
+.tytul .h2 {
+  width: 55px;
+  height: 34px;
+  top: 162px;
+  left: 283px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+.blok1 {
+  width: 50rem;
+  font-size: 13px;
+  margin-top: 20px;
+  box-sizing: content-box;
+  box-shadow: 10px 10px 5px rgb(179, 176, 176);
+  background-color: white;
+  border: 5px;
+  border-style: outset;
+  padding: 10px 10px 20px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px 10px 10px 10px;
+}
+.podtytul {
+  border: 10px;
+  background-color: blueviolet;
+}
+.blok2 {
+  width: 50rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 13px;
+  box-sizing: content-box;
+  box-shadow: 10px 10px 5px rgb(179, 176, 176);
+  background-color: white;
+  border: 5px;
+  border-style: outset;
+  padding: 10px 10px 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px 10px 10px 10px;
+}

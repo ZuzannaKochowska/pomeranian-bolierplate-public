@@ -5,6 +5,7 @@ import Element3 from '../Images/aside/Element3.svg';
 import Element4 from '../Images/aside/Element4.svg';
 import Element5 from '../Images/aside/Element5.jpg';
 import Element6 from '../Images/aside/Element6.png';
+import Element7 from '../Images/aside/Element7.svg';
 
 import './styles/aside.css';
 import { SettingIcon } from '../Components/Icons/SettingIcon';
@@ -37,6 +38,10 @@ export function AppAside() {
           <ul>
             <img src={Element6} alt="6"></img>
             <NavLink to="settings">Ustawienia</NavLink>
+          </ul>
+          <ul>
+            <img src={Element7} alt="7"></img>
+            <NavLink to="faq">FAQ</NavLink>
           </ul>
         </ul>
       </nav>
