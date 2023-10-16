@@ -24,7 +24,7 @@ aside li {
 
 aside li a {
   display: block;
-  padding: 0.5rem;
+  padding: 1px;
 }
 
 aside a.active {

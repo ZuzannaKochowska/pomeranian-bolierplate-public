@@ -1,0 +1,40 @@
+.tytul .h2 {
+  width: 55px;
+  height: 34px;
+  top: 162px;
+  left: 283px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+.blok1 {
+  width: 30rem;
+  font-size: 13px;
+  margin-top: 20px;
+  box-sizing: content-box;
+  box-shadow: 10px 10px 5px rgb(179, 176, 176);
+  background-color: white;
+  border: 5px;
+  border-style: outset;
+  margin-bottom: 20px;
+  border-radius: 10px 10px 10px 10px;
+  line-height: 32px;
+  gap: inherit;
+  padding: 18px 24px 18px 24px;
+}
+.podtytulek {
+  border: solid 0px 0px 1px 0px;
+}
+.blok2 {
+  width: 30rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 13px;
+  box-sizing: content-box;
+  box-shadow: 10px 10px 5px rgb(179, 176, 176);
+  background-color: white;
+  border: 5px;
+  border-style: outset;
+  padding: 18px 24px 18px 24px;
+  margin-bottom: 20px;
+  border-radius: 10px 10px 10px 10px;
+}

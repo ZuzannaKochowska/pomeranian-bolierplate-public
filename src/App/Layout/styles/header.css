@@ -19,6 +19,6 @@ header.header-title {
 }
 
 header .logo {
-  height: 20vmin;
+  height: 10vmin;
   pointer-events: none;
 }
