@@ -1,7 +1,5 @@
 import './styles.css';
-import { useState } from 'react';
 
-import korytko from '../Images/korytko.png';
 import { SingleQuestion } from '../Components/FAQ/SingleQuestion';
 
 // import duzefaq from '../Images/duzefaq.png';
@@ -9,10 +7,7 @@ import { SingleQuestion } from '../Components/FAQ/SingleQuestion';
 export function Faq() {
   return (
     <div>
-      <h2 className="tytul">
-        {'<'}FAQ
-        {/* <img src={duzefaq} alt="duzefaq"></img> */}
-      </h2>
+      <h2 className="tytul">{'<'}FAQ</h2>
       <div>Tutaj znajdź odpowiedzi na najczęściej zadawane pytania</div>
 
       <SingleQuestion

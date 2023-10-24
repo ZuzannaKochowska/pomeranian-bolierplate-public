@@ -6,16 +6,22 @@ export const SingleQuestion = (props) => {
   const question = props.question;
   const answer = props.answer;
 
+  const [isTrue, setIsTrue] = useState(false);
+
+  function clickHandler() {
+    setIsTrue(!isTrue);
+  }
+
   return (
     <div>
       <div className="blok1">
-        <h3 className="podtytulek">
+        <h3 className="podtytulek" onClick={clickHandler}>
           <img src={strzalka} alt="strzalka"></img>
           {question}
         </h3>
         <hr></hr>
-        <div>{answer}</div>
-      </div>{' '}
+        <div>{isTrue && answer}</div>
+      </div>
     </div>
   );
 };
