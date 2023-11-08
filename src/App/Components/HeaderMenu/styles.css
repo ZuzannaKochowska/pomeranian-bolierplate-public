@@ -125,7 +125,7 @@ header {
 
   padding-right: 3rem;
 
-  box-shadow: 0px 1px 9px 0px var(--color-grey);
+  box-shadow: 0px 0px 5px 0px var(--color-grey);
 }
 
 header > a:first-of-type {
