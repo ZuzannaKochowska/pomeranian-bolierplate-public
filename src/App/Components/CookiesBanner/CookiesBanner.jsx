@@ -1,7 +1,7 @@
 import './styles.css';
-import { CalgitendarIcon } from '../Icons/CalendarIcon';
+import { CalendarIcon } from '../Icons/CalendarIcon';
 
-const cookiesInLocalStarage = () => {
+const CookiesInLocalStorage = () => {
   console.log(!!localStorage, '!!localStorage');
   console.log(!!localStorage, '!localstorage');
 
@@ -16,12 +16,13 @@ export const CookieBanner = () => {
 
   return (
     <>
-      {cookiesInLocalStorage && (
+      {CookiesInLocalStorage && (
         <div className="cookie_wrapper">
           <div className="cookie_content">
-            <CalendarIcon className="content_icon" />
+            <CalendarIcon className="cookie_icon" />
+
             <h4>Pozwól na pliki cookies</h4>
-            <p>
+            <div>
               Nasza strona korzysta z ciasteczek, które umożliwiają poprawne
               działanie strony i pomagają nam świadczyć usługi na najwyższym
               poziomie. Możesz zaakceptować wykorzystanie przez nas wszystkich
@@ -29,8 +30,9 @@ export const CookieBanner = () => {
               referencji. W tym celu kliknij przycisk po prawej stronie “dopasuj
               zgody”, aby następnie wybrać te które odpowiadają Twoim
               indywidualnym preferencjom.
-            </p>
+            </div>
           </div>
+
           <div className="cookies_permissions">
             <button
               onClick={handleCookiesPermission}
