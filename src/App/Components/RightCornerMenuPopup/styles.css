@@ -1,0 +1,21 @@
+.ramka {
+  border-color: antiquewhite;
+  background-color: antiquewhite;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 80px;
+  width: 300px;
+}
+button {
+  background-color: pink;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 50px;
+  width: 200px;
+  color: white;
+}
+.tek1 {
+  font-size: 14px;
+}
+.tek2 {
+  font-size: 12px;
+}

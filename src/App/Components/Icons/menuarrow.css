@@ -1,0 +1,8 @@
+.logowanie {
+  display: flex;
+  justify-content: flex-end;
+}
+.log2 {
+  flex-wrap: wrap;
+  flex-direction: column;
+}

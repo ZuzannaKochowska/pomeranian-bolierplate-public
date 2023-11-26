@@ -4,7 +4,7 @@ import { MenuArrow } from '../Icons/MenuArrow';
 
 export function HeaderMenu() {
   return (
-    <header>
+    <div>
       <div className="images-container">
         <SettingIcon />
         <div className="circular_image">
@@ -15,8 +15,8 @@ export function HeaderMenu() {
           <h5>Kursantka </h5>
         </div>
 
-        <MenuArrow className="menu-arrow" />
+        <MenuArrow className="menu-arrow"></MenuArrow>
       </div>
-    </header>
+    </div>
   );
 }
