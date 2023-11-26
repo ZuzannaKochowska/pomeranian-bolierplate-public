@@ -6,3 +6,8 @@
   flex-wrap: wrap;
   flex-direction: column;
 }
+svg {
+  display: block;
+  margin-top: 10px;
+  margin-left: 20px;
+}

@@ -3,9 +3,9 @@ import { RightCornerMenuPopup } from '../RightCornerMenuPopup/RightCornerMenuPop
 import '../Icons/menuarrow.css';
 
 export function MenuArrow({ className = '' }) {
-  const [isTrue, setIsTrue] = useState(true);
+  const [isOpen, setIsOpen] = useState(true);
   const clickHandler = () => {
-    setIsTrue(!isTrue);
+    setIsOpen(!isOpen);
   };
   return (
     <div className="logowanie" onClick={clickHandler}>
@@ -22,7 +22,7 @@ export function MenuArrow({ className = '' }) {
           fill="#4B5563"
         />
       </svg>
-      <div className="log2">{!isTrue && <RightCornerMenuPopup />}</div>
+      <div className="log2">{!isOpen && <RightCornerMenuPopup />}</div>
     </div>
   );
 }

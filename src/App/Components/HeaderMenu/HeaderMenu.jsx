@@ -15,7 +15,7 @@ export function HeaderMenu() {
           <h5>Kursantka </h5>
         </div>
 
-        <MenuArrow className="menu-arrow"></MenuArrow>
+        <MenuArrow />
       </div>
     </div>
   );
