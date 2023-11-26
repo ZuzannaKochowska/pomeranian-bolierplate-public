@@ -1,14 +1,6 @@
-import { useState } from 'react';
-import { RightCornerMenuPopup } from '../RightCornerMenuPopup/RightCornerMenuPopup';
-import '../Icons/menuarrow.css';
-
 export function MenuArrow({ className = '' }) {
-  const [isOpen, setIsOpen] = useState(true);
-  const clickHandler = () => {
-    setIsOpen(!isOpen);
-  };
   return (
-    <div className="logowanie" onClick={clickHandler}>
+    <div className="logowanie">
       <svg
         width="20"
         height="12"
@@ -22,7 +14,6 @@ export function MenuArrow({ className = '' }) {
           fill="#4B5563"
         />
       </svg>
-      <div className="log2">{!isOpen && <RightCornerMenuPopup />}</div>
     </div>
   );
 }
