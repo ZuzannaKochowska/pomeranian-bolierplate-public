@@ -1,12 +1,9 @@
 import './styles.css';
-import { CalendarIcon } from '../Icons/CalendarIcon';
+import ciastko from '../../Images/ciastko.jpg';
 
 const CookiesInLocalStorage = () => {
-  console.log(!!localStorage, '!!localStorage');
-  console.log(!!localStorage, '!localstorage');
-
-  if (!!localStorage.getItem('cookies')) return true;
-  if (!localStorage.getItem('cookies')) return false;
+  if (localStorage.getItem('cookiesPermission') === 'true') return true;
+  if (!!localStorage.getItem('cookiesPermission')) return false;
 };
 
 export const CookieBanner = () => {
@@ -16,10 +13,10 @@ export const CookieBanner = () => {
 
   return (
     <>
-      {CookiesInLocalStorage && (
+      {!CookiesInLocalStorage && (
         <div className="cookie_wrapper">
           <div className="cookie_content">
-            <CalendarIcon className="cookie_icon" />
+            <img src={ciastko} alt="ciastko" className="cookie_icon" />
 
             <h4>Pozwól na pliki cookies</h4>
             <div>
