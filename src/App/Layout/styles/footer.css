@@ -4,13 +4,12 @@ footer {
   display: grid;
   grid-template-columns: 1fr 270px;
   position: relative;
-  padding: 10px;
+  padding: 15px 5px;
 }
 
 footer > * {
-  color: var(--color-white);
+  color: #ffff;
   text-decoration: none;
-  display: flex;
 }
 
 footer .text-up {
@@ -22,7 +21,7 @@ footer .text-down {
 }
 
 footer a {
-  text-align: right;
-  width: 100%;
-  display: block;
+  position: relative;
+  right: 80px;
+  width: 75%;
 }

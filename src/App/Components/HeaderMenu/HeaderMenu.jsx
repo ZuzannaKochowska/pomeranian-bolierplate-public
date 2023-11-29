@@ -1,10 +1,16 @@
 import './styles.css';
+import { useState } from 'react';
 import { SettingIcon } from '../Icons/SettingIcon';
 import { MenuArrow } from '../Icons/MenuArrow';
+import { RightCornerMenuPopup } from '../RightCornerMenuPopup/RightCornerMenuPopup';
 
 export function HeaderMenu() {
+  const [isOpen, setIsOpen] = useState(true);
+  const clickHandler = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-    <header>
+    <div>
       <div className="images-container">
         <SettingIcon />
         <div className="circular_image">
@@ -15,8 +21,12 @@ export function HeaderMenu() {
           <h5>Kursantka </h5>
         </div>
 
-        <MenuArrow className="menu-arrow" />
+        <button onClick={clickHandler} className="header-button-arrow">
+          {' '}
+          <MenuArrow className="menu-arrow" />
+        </button>
+        {!isOpen && <RightCornerMenuPopup />}
       </div>
-    </header>
+    </div>
   );
 }

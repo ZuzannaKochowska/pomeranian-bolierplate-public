@@ -40,7 +40,7 @@ export function FloatsAndPositioning() {
         </p>{' '}
       </div>{' '}
       <div className="div4">
-        {' '}
+        <div className="div4_divek">Lorem Ipsum is simply dummy text</div>{' '}
         <p>
           {' '}
           Lorem Ipsum is simply dummy text of the printing and typesetting

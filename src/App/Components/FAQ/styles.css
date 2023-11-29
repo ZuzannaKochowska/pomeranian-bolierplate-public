@@ -16,6 +16,9 @@
 .podtytulek {
   border: solid 0px 0px 1px 0px;
 }
+.rotate {
+  transform: rotate(270deg);
+}
 .blok2 {
   width: 30rem;
   padding-top: 10px;

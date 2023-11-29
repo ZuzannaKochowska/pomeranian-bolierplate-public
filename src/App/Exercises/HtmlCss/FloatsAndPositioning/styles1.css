@@ -11,11 +11,14 @@
   background: #ebebeb;
 }
 .div2_div1 {
+  color: white;
   padding: 12px 19px;
   width: 242px;
-  background: #ffd5db;
+  background: #868080;
   border: 1px solid #999999; /* Ustawienie absolutne względem rodzica */
-  /* position: absolute; */
+  position: absolute;
+  top: 50px;
+  right: 1rem;
 
   /* left: xxx; bottom: xxx */
 }
@@ -69,4 +72,14 @@
   left: 40px;
   bottom: 40px;
   background: #6b7280;
+}
+.div4_divek {
+  color: white;
+  padding: 12px 19px;
+  width: 180px;
+  background: #ae8383;
+  border: 1px solid #999999; /* Ustawienie absolutne względem rodzica */
+  position: absolute;
+  top: 10rem;
+  right: 3rem;
 }

@@ -3,7 +3,7 @@ import { ReactComponent as LogoSVG } from '../../Images/startItlogo.svg';
 
 export const Logo = () => {
   return (
-    <div>
+    <div className="logopom">
       <LogoSVG />
     </div>
   );

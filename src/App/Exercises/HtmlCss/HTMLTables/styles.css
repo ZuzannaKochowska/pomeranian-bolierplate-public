@@ -1,0 +1,16 @@
+.table {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: -2px 11px 61px -32px rgba(66, 68, 90, 0.35);
+  -moz-box-shadow: -2px 11px 61px -32px rgba(66, 68, 90, 0.35);
+  box-shadow: -2px 11px 61px -32px rgba(66, 68, 90, 0.35);
+}
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #f0bebe;
+}

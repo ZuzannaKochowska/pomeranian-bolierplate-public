@@ -15,10 +15,10 @@ export function AppAside() {
     <aside>
       <nav>
         <ul>
-          <u>
+          <ul>
             <img src={Element1} alt="1"></img>
             <NavLink to="dashboard">Dashboard</NavLink>
-          </u>
+          </ul>
           <ul>
             <img src={Element2} alt="2"></img>
             <NavLink to="cv">CV</NavLink>
