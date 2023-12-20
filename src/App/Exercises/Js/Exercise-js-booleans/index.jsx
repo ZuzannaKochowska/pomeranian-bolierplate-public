@@ -27,11 +27,21 @@ export function Exercise() {
   // negacja
   // const notValid = !isValid;
 
+  //
+  // if (x==5) {
+  //   //console.log(magia)
+  // } else {
+  //   //console.log(brak magii)
+
+  // }
+
+  // (x > 5) ? console.log('wieksze od 5') : console.log('mniejsze lub rowne od 5')
+
   return (
     <>
       {isValid && (
         <div style={{ backgroudColor: passStyles ? 'red' : 'black' }}>
-          JS boolenas
+          JS booleans
         </div>
       )}
     </>
