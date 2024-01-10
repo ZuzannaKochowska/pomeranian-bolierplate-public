@@ -14,6 +14,7 @@ import { blockRouterMetaData as blockRouterMetaPromisesUseEffect } from './Exerc
 import { blockRouterMetaData as blockRouterMetaSingleTask } from './ToDo/router-data';
 import { blockRouterMetaData as blockRouterMetaOwnExercises } from './OwnExercises/router-data';
 import { blockRouterMetaData as blockRouterMetaOwnExercises1 } from './OwnExercises1/router-data';
+import { blockRouterMetaData as blockRouterDataInstrukcje } from './Instrukcje_warunkowe/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -30,5 +31,6 @@ export const blockRouterMetaData = [
   blockRouterMetaSingleTask,
   blockRouterMetaOwnExercises,
   blockRouterMetaOwnExercises1,
+  blockRouterDataInstrukcje,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
