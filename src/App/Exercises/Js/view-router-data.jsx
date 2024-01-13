@@ -15,6 +15,7 @@ import { blockRouterMetaData as blockRouterMetaSingleTask } from './ToDo/router-
 import { blockRouterMetaData as blockRouterMetaOwnExercises } from './OwnExercises/router-data';
 import { blockRouterMetaData as blockRouterMetaOwnExercises1 } from './OwnExercises1/router-data';
 import { blockRouterMetaData as blockRouterDataInstrukcje } from './Instrukcje_warunkowe/router-data';
+import { blockRouterMetaData as blockRouterDataPetle } from './Petle/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -32,5 +33,6 @@ export const blockRouterMetaData = [
   blockRouterMetaOwnExercises,
   blockRouterMetaOwnExercises1,
   blockRouterDataInstrukcje,
+  blockRouterDataPetle,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
