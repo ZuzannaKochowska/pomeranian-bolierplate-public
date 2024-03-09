@@ -18,7 +18,9 @@ export const Blocks = () => {
       </p>
       <div className="dashboard-tiles">
         <div>
-          <p className="dashboard-tile-title">Moje CV</p>{' '}
+          <NavLink to="/CV" className="dashboard-tile-title">
+            Moje CV
+          </NavLink>{' '}
           <img src={PersonalCard} alt="personal card" />
           <p className="dashboard-tile-description">Podgląd CV</p>
         </div>
@@ -28,22 +30,23 @@ export const Blocks = () => {
           <p className="dashboard-tile-description">Przebyte projekty </p>
         </div>
         <div>
-          <p className="dashboard-tile-title">Ćwiczenia</p>
+          <NavLink to="/Exercises" className="dashboard-tile-title">
+            Ćwiczenia
+          </NavLink>
           <img src={Book} alt="book" />
           <p className="dashboard-tile-description">
             Wszystkie wykonane ćwiczenia{' '}
           </p>
         </div>
         <div>
-          <p className="dashboard-tile-title">Edukacja</p>
+          <NavLink to="/Education" className="dashboard-tile-title">
+            Edukacja
+          </NavLink>
           <img src={Book} alt="book" />
           <p className="dashboard-tile-description">Przebyte kursy</p>
         </div>
         <div>
-          <NavLink
-            to="../../TechStack/TechStack.jsx"
-            className="dashboard-tile-title"
-          >
+          <NavLink to="/TechStack" className="dashboard-tile-title">
             Tech stack
           </NavLink>
 

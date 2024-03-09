@@ -12,27 +12,27 @@ export function Calendar() {
     'Sunday',
   ];
 
-  const daysOfMonth = Array.from({ length: 31 }, (_, i) =>
+  const daysOfMonthJanuary = Array.from({ length: 31 }, (_, i) =>
     String(i + 1).padStart(2, '0')
   );
 
-  const daysOfMonth2 = Array.from({ length: 29 }, (_, i) =>
+  const daysOfMonthFebruary = Array.from({ length: 29 }, (_, i) =>
     String(i + 1).padStart(2, '0')
   );
 
   // Group days into weeks
-  const weeks = [];
-  while (daysOfMonth.length > 0) {
-    weeks.push(daysOfMonth.splice(0, 7));
+  const weeksJanuary = [];
+  while (daysOfMonthJanuary.length > 0) {
+    weeksJanuary.push(daysOfMonthJanuary.splice(0, 7));
   }
-  const weeks2 = [];
-  while (daysOfMonth2.length > 0) {
-    weeks2.push(daysOfMonth.splice(0, 7));
+  const weeksFebruary = [];
+  while (daysOfMonthFebruary.length > 0) {
+    weeksFebruary.push(daysOfMonthFebruary.splice(0, 7));
   }
   return (
     <div className="calendar">
       <h1>Kalendarz</h1>
-      <h2>JANUARY</h2>
+      <h2>JANUARY 2024</h2>
       <table>
         <thead>
           <tr>
@@ -42,10 +42,10 @@ export function Calendar() {
           </tr>
         </thead>
         <tbody>
-          {weeks.map((week, weekIndex) => (
+          {weeksJanuary.map((week, weekIndex) => (
             <tr key={weekIndex}>
               {week.map((day, dayIndex) => (
-                <td key={dayIndex}>{day}</td>
+                <th key={dayIndex}>{day}</th>
               ))}
             </tr>
           ))}
@@ -61,7 +61,15 @@ export function Calendar() {
             ))}
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+          {weeksFebruary.map((weeks2, weekIndex) => (
+            <tr key={weekIndex}>
+              {weeks2.map((day, dayIndex) => (
+                <th key={dayIndex}>{day}</th>
+              ))}
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );
