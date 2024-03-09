@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import Element1 from '../Images/aside/Element1.svg';
-import Element2 from '../Images/aside/Element2.svg';
+
 import Element3 from '../Images/aside/Element3.svg';
 import Element4 from '../Images/aside/Element4.svg';
 import Element5 from '../Images/aside/Element5.jpg';
@@ -8,7 +8,6 @@ import Element6 from '../Images/aside/Element6.png';
 import Element7 from '../Images/aside/Element7.svg';
 
 import './styles/aside.css';
-import { SettingIcon } from '../Components/Icons/SettingIcon';
 
 export function AppAside() {
   return (
@@ -19,10 +18,7 @@ export function AppAside() {
             <img src={Element1} alt="1"></img>
             <NavLink to="dashboard">Dashboard</NavLink>
           </ul>
-          <ul>
-            <img src={Element2} alt="2"></img>
-            <NavLink to="cv">CV</NavLink>
-          </ul>
+
           <ul>
             <img src={Element3} alt="3"></img>
             <NavLink to="blocks">Bloki</NavLink>
